@@ -1,0 +1,14 @@
+.wrapper {
+
+    width: 250px;
+    margin: 5px;
+    padding: 5px;
+}
+.wrapper span{width: 15px;
+    margin: 5px;
+}
+
+.wrapper button{
+    margin-left: 5px;
+    padding: 5px
+}
