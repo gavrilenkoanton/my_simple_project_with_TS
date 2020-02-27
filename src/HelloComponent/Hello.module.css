@@ -6,19 +6,6 @@
     background-color: #dcd1ff;
 }
 
-.wrapper input {
-    border-radius: 5px;
-    height: 25px;
-    margin: 10px 0;
-}
-
-.wrapper button {
-    margin-left: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    height: 35px;
-}
-
 .friends {
     color: #5d5d5d;
 }

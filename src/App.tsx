@@ -9,7 +9,6 @@ interface IProps {
 }
 
 function App(props: IProps) {
-
     return (
         <div className={styles.App}>
             <MyName/>

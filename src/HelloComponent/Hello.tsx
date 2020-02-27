@@ -1,12 +1,10 @@
 import React from 'react';
 import styles from './Hello.module.css';
 import ListOfFriends from "./ListOfFriends/ListOfFriends";
+import PushButton from "./PushButton/PushButton";
+import InputComponent from "./InputComponent/InputComponent";
 
-interface IProps {
-
-}
-
-class Hello extends React.Component<IProps> {
+class Hello extends React.Component {
     titleRef = React.createRef<HTMLInputElement>();
     state = {
         names: []
@@ -28,8 +26,8 @@ class Hello extends React.Component<IProps> {
         return (
             <div className={styles.wrapper}>
                 <div>
-                    <input type="text" placeholder="Введи свое имя" ref={this.titleRef}/>
-                    <button onClick={this.onButtonClick}>Push</button>
+                    <InputComponent titleRef={this.titleRef}/>
+                    <PushButton onClickButton={this.onButtonClick}/>
                 </div>
                 <div className={styles.friends}>
                     {writeMyFriends}
