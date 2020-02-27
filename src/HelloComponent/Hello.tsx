@@ -12,10 +12,14 @@ class Hello extends React.Component {
     onButtonClick = () => {
         let inputValue: string = this.titleRef.current ? this.titleRef.current.value : '';
         if (this.titleRef.current) this.titleRef.current.value = '';
-        alert("Дароу, " + inputValue);
-        let newName: object = {name: inputValue};
-        let newMas = [newName, ...this.state.names];
-        this.setState({names: newMas});
+        if (inputValue === '') {
+            alert("Бро, введи имя")
+        } else {
+            alert("Дароу, " + inputValue);
+            let newName: object = {name: inputValue};
+            let newMas = [newName, ...this.state.names];
+            this.setState({names: newMas});
+        }
     };
 
     render = () => {

@@ -6,9 +6,11 @@ interface IProps {
 }
 
 class MySkills extends React.Component<IProps> {
-    mySkills = this.props.mySkills.map((item: any) => {
+    mySkills = this.props.mySkills.map((item: any, i) => {
         return (
-            <div className={styles.skill}>
+            <div className={styles.skill}
+                 key={i}
+            >
                 {item.skill}
             </div>
         )
