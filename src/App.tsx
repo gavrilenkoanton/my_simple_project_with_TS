@@ -11,7 +11,9 @@ interface IProps {
 function App(props: IProps) {
     return (
         <div className={styles.App}>
-            <MyName/>
+            <div className={styles.Name}>
+                <MyName/>
+            </div>
             <MySkills mySkills={props.mySkills}/>
             <Hello/>
         </div>
