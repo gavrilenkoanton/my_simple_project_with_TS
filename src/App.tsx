@@ -10,13 +10,13 @@ interface IProps {
 
 function App(props: IProps) {
 
-  return (
-    <div className={styles.App}>
-        <MyName />
-        <MySkills blabla={props.mySkills}/>
-        <Hello />
-    </div>
-  );
+    return (
+        <div className={styles.App}>
+            <MyName/>
+            <MySkills mySkills={props.mySkills}/>
+            <Hello/>
+        </div>
+    );
 }
 
 export default App;

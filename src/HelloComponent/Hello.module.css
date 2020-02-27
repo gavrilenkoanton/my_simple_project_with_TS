@@ -1,14 +1,24 @@
 .wrapper {
-
-    width: 250px;
-    margin: 5px;
-    padding: 5px;
-}
-.wrapper span{width: 15px;
-    margin: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 320px;
+    background-color: #dcd1ff;
 }
 
-.wrapper button{
+.wrapper input {
+    border-radius: 5px;
+    height: 25px;
+    margin: 10px 0;
+}
+
+.wrapper button {
     margin-left: 5px;
-    padding: 5px
+    padding: 5px;
+    border-radius: 5px;
+    height: 35px;
+}
+
+.friends {
+    color: #5d5d5d;
 }

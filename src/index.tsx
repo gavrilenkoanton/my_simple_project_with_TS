@@ -4,12 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
 let me = [
     {skill: 'кручу'},
     {skill: 'верчу'},
     {skill: 'запутать хочу'}
-
 ];
 
 ReactDOM.render(<App mySkills={me}/>, document.getElementById('root'));

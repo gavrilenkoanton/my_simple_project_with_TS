@@ -1,9 +1,7 @@
 .mySkills {
     flex-wrap: wrap;
-
     display: flex;
-
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .skill {
@@ -16,5 +14,4 @@
     text-align: center;
     height: 80px;
     width: 80px;
-
 }

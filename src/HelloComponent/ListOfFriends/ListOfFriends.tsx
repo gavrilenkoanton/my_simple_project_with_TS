@@ -2,14 +2,14 @@ import React from 'react';
 import styles from './ListOfFriends.module.css';
 
 interface IProps {
-name: string
+    name: string
 }
 
 class ListOfFriends extends React.Component<IProps> {
 
     render = () => {
         return (
-            <span>
+            <span className={styles.list}>
                 {this.props.name}
             </span>
         );

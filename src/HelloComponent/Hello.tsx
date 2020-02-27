@@ -13,28 +13,27 @@ class Hello extends React.Component<IProps> {
     };
     onButtonClick = () => {
         let inputValue: string = this.titleRef.current ? this.titleRef.current.value : '';
-        if(this.titleRef.current)  this.titleRef.current.value = '';
-        alert("Дароу, "+inputValue)
+        if (this.titleRef.current) this.titleRef.current.value = '';
+        alert("Дароу, " + inputValue);
         let newName: object = {name: inputValue};
         let newMas = [newName, ...this.state.names];
         this.setState({names: newMas});
-
     };
 
-
     render = () => {
-
-        let writeMyFriends = this.state.names.map((i:any, index:number)=>{
+        let writeMyFriends = this.state.names.map((i: any, index: number) => {
             return <div>К нам присоединился: <ListOfFriends name={i.name} key={index}/></div>
         });
 
         return (
             <div className={styles.wrapper}>
-                <input type="text" placeholder="Введи свое имя" ref={this.titleRef}/>
-                <button onClick={this.onButtonClick}>Push</button>
-                {writeMyFriends}
-
-
+                <div>
+                    <input type="text" placeholder="Введи свое имя" ref={this.titleRef}/>
+                    <button onClick={this.onButtonClick}>Push</button>
+                </div>
+                <div className={styles.friends}>
+                    {writeMyFriends}
+                </div>
             </div>
         );
     }
