@@ -1,0 +1,19 @@
+.nav {
+    background-color: #dcd1ff;
+    display: flex;
+    justify-content: center;
+}
+
+.nav a{
+    text-decoration: none;
+    margin: 15px 15px;
+}
+
+.nav button{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+.active{
+    color: red;
+}

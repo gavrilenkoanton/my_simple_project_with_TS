@@ -1,0 +1,11 @@
+.input {
+    border-radius: 5px;
+    height: 25px;
+    margin: 10px 0;
+}
+.inputError {
+    border-radius: 5px;
+    height: 25px;
+    margin: 10px 0;
+    border-color: red;
+}

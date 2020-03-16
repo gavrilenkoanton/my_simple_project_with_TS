@@ -7,20 +7,24 @@ import InputComponent from "./InputComponent/InputComponent";
 class Hello extends React.Component {
     titleRef = React.createRef<HTMLInputElement>();
     state = {
-        names: []
+        names: [],
+        f: () => {}
+
     };
-    onButtonClick = () => {
-        let inputValue: string = this.titleRef.current ? this.titleRef.current.value : '';
-        if (this.titleRef.current) this.titleRef.current.value = '';
-        if (inputValue === '') {
-            alert("Бро, введи имя")
+    onButtonClick = (newName: any) => {
+        // let inputValue: string = this.titleRef.current ? this.titleRef.current.value : '';
+        // if (this.titleRef.current) this.titleRef.current.value = '';
+        if (newName === '') {
+            alert("Бро, введи имя");
         } else {
-            alert("Дароу, " + inputValue);
-            let newName: object = {name: inputValue};
-            let newMas = [newName, ...this.state.names];
+            alert("Дароу, " + newName);
+            let newNameBro: object = {name: newName};
+            let newMas = [newNameBro, ...this.state.names];
             this.setState({names: newMas});
         }
     };
+
+    setF = (f: () => void) =>{this.setState({f})};
 
     render = () => {
         let writeMyFriends = this.state.names.map((i: any, index: number) => {
@@ -30,8 +34,8 @@ class Hello extends React.Component {
         return (
             <div className={styles.wrapper}>
                 <div>
-                    <InputComponent titleRef={this.titleRef}/>
-                    <PushButton onClickButton={this.onButtonClick}/>
+                    <InputComponent titleRef={this.titleRef} onEnterPush={this.onButtonClick} setF={this.setF}/>
+                    <PushButton onClickButton={this.state.f}/>
                 </div>
                 <div className={styles.friends}>
                     {writeMyFriends}
