@@ -5,9 +5,11 @@ import TodoListTask from "./ToDoListTask/ToDoListTask";
 interface IProps {
     changeTitle: any;
     changeStatus: any;
+    changePriority: any;
     changeS: any;
     tasks: Array<string>;
     removeTask: any;
+    dateUpdater: any
 }
 
 class ToDoListTasks extends React.Component<IProps> {
@@ -20,9 +22,14 @@ class ToDoListTasks extends React.Component<IProps> {
                               title={item.title}
                               isDone={item.isDone}
                               priority={item.priority}
+                              created={item.created}
+                              updated={item.updated}
+                              finished={item.finished}
                               changeStatus={this.props.changeStatus}
                               changeTitle={this.props.changeTitle}
                               removeTask={this.props.removeTask}
+                              changePriority={this.props.changePriority}
+                              dateUpdater={this.props.dateUpdater}
                 />
             )
         });

@@ -3,7 +3,7 @@ import styles from './NavMenu.module.css';
 
 class NavMenu extends React.Component {
     state = {
-        days: ['Mon', 'Tue'],
+        days: ['Mon', 'Tue', 'Wed'],
         id: 0,
         isHidden: true,
     };
